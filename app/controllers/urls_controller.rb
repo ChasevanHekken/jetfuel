@@ -3,7 +3,7 @@ class UrlsController < ApplicationController
   def home
     @url = Url.new
 
-    @urls = Url.all
+    @urls = Url.order(rank: :desc)
   end
 
   def create
