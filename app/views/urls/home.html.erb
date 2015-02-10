@@ -46,7 +46,7 @@
     <tr>
       <% @urls.each do |url| %>
         <td><%= url.long %></td>
-        <td><a href=""><%= url.short_url %></a></td>
+        <td><a href="<%= url.short_url %>"><%= url.short_url %></a></td>
         <td><%= url.created_at.strftime("%d/%m/%y %l:%M") %>
         <td><%= url.rank %></td>
       </tr>
