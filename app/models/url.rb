@@ -1,5 +1,5 @@
 class Url < ActiveRecord::Base
-  validates :long, format: { with: VALID_EMAIL_REGEX }
+  # validates :long, format: { with: VALID_EMAIL_REGEX }
 
   after_create :generate_short
 
