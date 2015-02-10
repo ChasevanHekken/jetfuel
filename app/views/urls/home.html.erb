@@ -1,0 +1,54 @@
+<h1>Shorten Your Url</h1>
+<br>
+<h3>Enter Long Url Here</h3>
+
+<div>
+  <%= form_for(@url) do |f| %>
+    <% if @url.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@url.errors.count, "error") %> prohibited this short_url from being saved:</h2>
+
+        <ul>
+        <% @url.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.text_field :long %>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
+</div>
+<br>
+<br>
+<br>
+<h3>List of Previously Shortened Urls</h3>
+
+<div>
+  <table class="table table-condensed table-striped table-hover text-center">
+  <thead>
+    <tr>
+      <th class="text-center">Original URL</th>
+      <th class="text-center">Short URL</th>
+      <th class="text-center">Created At</th>
+      <th class="text-center">Rank</th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <% @urls.each do |url| %>
+      <td><%= url.long %></td>
+      <td><%#= link_to "www.jetfuel.com/#{url.id.to_s(36)}", url, target: "new" %></td>
+      <td><%= url.created_at.strftime("%d/%m/%y %l:%M") %>
+      <td><%= url.rank %></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>
