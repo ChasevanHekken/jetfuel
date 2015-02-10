@@ -8,7 +8,7 @@ class Url < ActiveRecord::Base
   end
 
   def short_url
-    "localhost:3000/" + self.short
+    "http://localhost:3000/" + self.short
   end
 
 end

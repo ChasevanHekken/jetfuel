@@ -9,6 +9,11 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'foundation-rails'
+gem 'turbolinks'
+gem 'jquery-turbolinks'
+
+gem 'jquery-datatables-rails'
+gem 'jquery-ui-rails'
 
 group :development, :test do
   gem 'byebug'
