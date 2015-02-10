@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   get ':slug' => 'urls#show'
 
   resources :urls
+
+  namespace :api do
+    resources :urls
+  end
 end

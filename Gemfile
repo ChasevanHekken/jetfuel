@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'foundation-rails'
 gem 'turbolinks'
 gem 'jquery-turbolinks'
+gem 'responders'
 
 gem 'jquery-datatables-rails'
 gem 'jquery-ui-rails'
